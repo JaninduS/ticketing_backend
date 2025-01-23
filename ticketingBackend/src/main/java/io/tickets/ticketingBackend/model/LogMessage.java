@@ -4,13 +4,16 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "log_messages")
 public class LogMessage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "logMessage")
     private String message;
 
+    @Column(name = "dateTime")
     private LocalDateTime timestamp;
 
     // Constructors
